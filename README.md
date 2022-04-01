@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.com/Kazantsev27/CreatePDF.svg?branch=master)](https://travis-ci.com/Kazantsev27/CreatePDF)
 
 # CreatePDF
 Версия 1.3 от 8 мая:
