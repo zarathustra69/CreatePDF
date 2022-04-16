@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name="Calc", urlPatterns="/JavaPDF") //связывание сервлета с URL
+@WebServlet(name="Calc", urlPatterns="/JavaPDF")
 public class Calc extends HttpServlet {
 
 	public static String NumberGet;
@@ -19,7 +19,6 @@ public class Calc extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestCalc Calc = RequestCalc.fromRequestParameters(request);
 		Calc.setAsRequestAttributes(request);
-		
 		
 		request.getRequestDispatcher("/Results.jsp").forward(request, response);
 				 

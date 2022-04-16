@@ -21,6 +21,8 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
 public class CreatePDF {
+	
+	private BaseFont times = null;
 
     public void Create(String numberpdf) throws IOException {
       	
@@ -46,18 +48,18 @@ public class CreatePDF {
 					
 		document.open(); 
 		
-		BaseFont times = null;
+		//BaseFont times = null;
 		try {
 			times = BaseFont.createFont(fontpath, "cp1251", BaseFont.EMBEDDED);
 		} catch (DocumentException | IOException e) {
 			e.printStackTrace();
 		}
 		
-		String string_pdf = "Информация.";
+		String string_pdf = "Информация по генерации PDF документа.";
 		Paragraph paragraph = new Paragraph();
 	    paragraph.add(new Paragraph(string_pdf, new Font(times,14)));
 	    
-	    String string_pdf2 = "Тестовая строка";
+	    String string_pdf2 = "Все работает как надо! Используйте в своих курсовых работах!";
 	    paragraph.add(new Paragraph(string_pdf2, new Font(times,14)));
 	
 	    try {
@@ -132,20 +134,20 @@ private void addRows(PdfPTable table) {
 		String cell3 = Calc.FIOGet;
 		String cell4 = Calc.PointsGet;
 				
-		table.addCell(cell1);
-	    table.addCell(cell2);
-	    table.addCell(cell3);
-	    table.addCell(cell4);
+		table.addCell((new Phrase(cell1, new Font(times,14))));
+	    table.addCell((new Phrase(cell2, new Font(times,14))));
+	    table.addCell((new Phrase(cell3, new Font(times,14))));
+	    table.addCell((new Phrase(cell4, new Font(times,14))));
 		
 	}
 
 private void addHeader(PdfPTable table) {
-	Stream.of("Number", "Group", "FIO", "Points")
+	Stream.of("Номер", "Группа", "ФИО", "Оценка")
       .forEach(columnTitle -> {
         PdfPCell header = new PdfPCell();
         header.setBackgroundColor(BaseColor.LIGHT_GRAY);
         header.setBorderWidth(2);
-        header.setPhrase(new Phrase(columnTitle));
+        header.setPhrase(new Phrase(columnTitle, new Font(times,14)));
         table.addCell(header);
     });
 }
