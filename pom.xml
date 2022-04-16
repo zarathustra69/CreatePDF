@@ -6,12 +6,16 @@
   <packaging>war</packaging>
   <name>CreatePDF</name>
   <description>Test for course work to create PDF</description>
-  <url>http://maven.apache.org</url>
+  <url>http://xn--e1afhkfagivn.xn--p1ai/</url>
+  
+  <properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
   
   <build>
   <finalName>CreatePDF</finalName>
   <defaultGoal>package</defaultGoal>
-    
 <pluginManagement>
             <plugins>
                 <plugin>
@@ -24,31 +28,7 @@
                     </configuration>
                 </plugin>
                 
-                <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-dependency-plugin</artifactId>
-    <version>3.1.2</version>
-    <executions>
-        <execution>
-            <phase>package</phase>
-            <goals>
-                <goal>copy</goal>
-            </goals>
-            <configuration>
-                <artifactItems>
-                    <artifactItem>
-                        <groupId>com.heroku</groupId>
-                        <artifactId>webapp-runner</artifactId>
-                        <version>9.0.31.0</version>
-                        <destFileName>webapp-runner.jar</destFileName>
-                    </artifactItem>
-                </artifactItems>
-                <outputDirectory>artifacts</outputDirectory>
-            </configuration>
-        </execution>
-    </executions>
-</plugin>
-                
+                                
 <plugin>
     <artifactId>maven-war-plugin</artifactId>
     <version>3.3.0</version>
