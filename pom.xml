@@ -13,7 +13,7 @@
   <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
   
-  <build>
+<build>
   <finalName>CreatePDF</finalName>
   <defaultGoal>package</defaultGoal>
 <pluginManagement>
@@ -27,8 +27,7 @@
                         <encoding>UTF-8</encoding>
                     </configuration>
                 </plugin>
-                
-                                
+                                    
 <plugin>
     <artifactId>maven-war-plugin</artifactId>
     <version>3.3.0</version>
@@ -36,42 +35,34 @@
         <goal>war:inplace</goal>
         <outputDirectory>artifacts</outputDirectory>
     </configuration>
-</plugin>
-                
+</plugin>    
             </plugins>
         </pluginManagement>
 </build>
-  
-  <dependencies>
-        <dependency>
+
+<dependencies>
+<dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
+</dependency>
+
+<dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
-        </dependency>
+</dependency>
         <dependency>
             <groupId>javax.el</groupId>
             <artifactId>el-api</artifactId>
             <version>2.2</version>
-        </dependency>
-        
-<dependency>
-    <groupId>com.github.jsimone</groupId>
-    <artifactId>webapp-runner</artifactId>
-    <version>9.0.27.1</version>
-    <scope>provided</scope>
 </dependency>
         
-        <dependency>
+<dependency>
     <groupId>com.itextpdf</groupId>
     <artifactId>itextpdf</artifactId>
     <version>5.5.13</version>
 </dependency>
-        
-    </dependencies> 
+</dependencies> 
 </project>
