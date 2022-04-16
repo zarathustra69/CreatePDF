@@ -23,8 +23,7 @@ public class Calc extends HttpServlet {
 		request.getRequestDispatcher("/Results.jsp").forward(request, response);
 				 
 		CreatePDF PDF = new CreatePDF();
-		String goals = "Hello";
-		PDF.Create(goals);
+		PDF.Create();
 		
 	}
 	

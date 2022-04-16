@@ -24,7 +24,7 @@ public class CreatePDF {
 	
 	private BaseFont times = null;
 
-    public void Create(String numberpdf) throws IOException {
+    public void Create() throws IOException {
       	
     	Document document = new Document();
     	
