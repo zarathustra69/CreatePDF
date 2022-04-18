@@ -33,7 +33,8 @@
     <version>3.3.0</version>
     <configuration>
         <goal>war:inplace</goal>
-        <outputDirectory>artifacts</outputDirectory>
+        <!-- указание директории сохранения war файла, укажем по умолчанию -->
+        <outputDirectory>target</outputDirectory>
     </configuration>
 </plugin>    
             </plugins>
